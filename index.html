@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section class="hero wrap">
+  <h1>{{ site.title }}<span class="dot" aria-hidden="true">.</span></h1>
+  <p class="lede">{{ site.description }}</p>
+  <p class="hero-links">
+    <a class="btn" href="{{ '/blog/' | relative_url }}">All posts</a>
+    <a class="link-quiet" href="{{ '/feed.xml' | relative_url }}">rss &nearr;</a>
+  </p>
+</section>
+
+<section class="wrap">
+  <div class="section-label">
+    <span>Latest</span>
+    <a href="{{ '/blog/' | relative_url }}">every post &rarr;</a>
+  </div>
+
+  {% include post-list.html posts=site.posts limit=5 %}
+</section>

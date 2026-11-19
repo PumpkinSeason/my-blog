@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="mark" aria-hidden="true"></span>
+      <span>{{ site.brand | default: site.title }}</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' or page.collection == 'posts' %} aria-current="page"{% endif %}>blog</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
+      <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+    </nav>
+  </div>
+</header>
