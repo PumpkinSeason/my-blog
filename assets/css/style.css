@@ -524,6 +524,16 @@ img {
   border-radius: var(--radius);
 }
 
+.prose figure {
+  margin: 2rem 0;
+}
+
+.prose figure img {
+  display: block;
+  max-width: min(100%, 34rem);
+  margin-inline: auto;
+}
+
 .prose figcaption {
   margin-top: 0.6rem;
   font-family: var(--font-mono);
