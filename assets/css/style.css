@@ -682,17 +682,16 @@ samp {
   border-top: 1px solid var(--border-soft);
   padding: 2.25rem 0 3rem;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
   color: var(--ink-faint);
 }
 
 .site-footer .wrap {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
 }
 
 .site-footer a {
@@ -707,11 +706,13 @@ samp {
 
 /* ---------- colour scheme switch ---------- */
 
-html:has(#scheme-light:checked) {
+html:has(#scheme-light:checked),
+html[data-scheme="light"] {
   color-scheme: light;
 }
 
-html:has(#scheme-dark:checked) {
+html:has(#scheme-dark:checked),
+html[data-scheme="dark"] {
   color-scheme: dark;
 }
 

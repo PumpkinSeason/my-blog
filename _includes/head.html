@@ -22,4 +22,27 @@
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var stored = null;
+      try { stored = localStorage.getItem('scheme'); } catch (e) {}
+      if (stored === 'light' || stored === 'dark') root.dataset.scheme = stored;
+
+      document.addEventListener('DOMContentLoaded', function () {
+        if (stored) {
+          var saved = document.getElementById('scheme-' + stored);
+          if (saved) saved.checked = true;
+        }
+        var inputs = document.querySelectorAll('.switch input');
+        Array.prototype.forEach.call(inputs, function (input) {
+          input.addEventListener('change', function () {
+            root.dataset.scheme = input.value;
+            try { localStorage.setItem('scheme', input.value); } catch (e) {}
+          });
+        });
+      });
+    })();
+  </script>
 </head>
