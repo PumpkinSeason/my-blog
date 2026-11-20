@@ -9,6 +9,16 @@
       <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' or page.collection == 'posts' %} aria-current="page"{% endif %}>blog</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
       <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+
+      <fieldset class="switch">
+        <legend class="visually-hidden">Colour scheme</legend>
+        <input type="radio" name="scheme" id="scheme-auto" checked>
+        <label for="scheme-auto" aria-label="Follow system">auto</label>
+        <input type="radio" name="scheme" id="scheme-light">
+        <label for="scheme-light" aria-label="Light">day</label>
+        <input type="radio" name="scheme" id="scheme-dark">
+        <label for="scheme-dark" aria-label="Dark">night</label>
+      </fieldset>
     </nav>
   </div>
 </header>
