@@ -858,11 +858,22 @@ html[data-scheme="day"] {
 
 @media (max-width: 600px) {
   .site-header .wrap {
-    height: 3.75rem;
+    height: auto;
+    min-height: 3.75rem;
+    flex-wrap: wrap;
+    padding-block: 0.55rem;
+    row-gap: 0.45rem;
   }
 
   .nav {
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.9rem;
+    row-gap: 0.4rem;
+  }
+
+  .nav .nav-rss {
+    display: none;
   }
 
   .hero {

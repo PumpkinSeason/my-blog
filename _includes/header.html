@@ -8,7 +8,8 @@
     <nav class="nav" aria-label="Primary">
       <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' or page.collection == 'posts' %} aria-current="page"{% endif %}>blog</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
-      <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+      <a href="{{ '/issues/' | relative_url }}"{% if page.url == '/issues/' %} aria-current="page"{% endif %}>issues</a>
+      <a href="{{ '/feed.xml' | relative_url }}" class="nav-rss">rss</a>
 
       <div class="switch" role="radiogroup" aria-label="Colour scheme">
         <input type="radio" name="scheme" id="scheme-day" value="day">
