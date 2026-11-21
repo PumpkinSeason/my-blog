@@ -10,15 +10,14 @@
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>about</a>
       <a href="{{ '/feed.xml' | relative_url }}">rss</a>
 
-      <fieldset class="switch">
-        <legend class="visually-hidden">Colour scheme</legend>
+      <div class="switch" role="radiogroup" aria-label="Colour scheme">
         <input type="radio" name="scheme" id="scheme-auto" value="auto" checked>
         <label for="scheme-auto" aria-label="Follow system">auto</label>
         <input type="radio" name="scheme" id="scheme-light" value="light">
         <label for="scheme-light" aria-label="Light">day</label>
         <input type="radio" name="scheme" id="scheme-dark" value="dark">
         <label for="scheme-dark" aria-label="Dark">night</label>
-      </fieldset>
+      </div>
     </nav>
   </div>
 </header>

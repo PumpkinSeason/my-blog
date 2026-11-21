@@ -1,16 +1,17 @@
 ---
 layout: page
 title: About
+heading: "#About"
 permalink: /about/
 ---
 
-Hi — I'm *pumpkin_season*
+Hi — I'm {pumpkin_season}
 
 ## What is this place?
 
 A notebook, mostly.
 
-Thanks for stopping by.
+Thanks for stopping by
 
 Mind the leaves on your way out.
 
