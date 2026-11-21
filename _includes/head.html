@@ -20,9 +20,6 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta name="twitter:card" content="summary">
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-
   <script>
     (function () {
       var root = document.documentElement;
@@ -47,4 +44,14 @@
       });
     })();
   </script>
+
+  <style>
+    /* paint the canvas before the stylesheet arrives, in the right colour */
+    html { background: #0d1216; }
+    html[data-scheme="day"] { background: #ffffff; }
+    html[data-scheme="evening"] { background: #f7f3eb; }
+  </style>
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
