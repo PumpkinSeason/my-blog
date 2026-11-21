@@ -4,28 +4,28 @@
    ============================================================ */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
   /* surfaces */
-  --bg: light-dark(#f7f3eb, #0d1216);
-  --bg-soft: light-dark(#f1ebe1, #11181d);
-  --surface: light-dark(#ece4d6, #172027);
-  --surface-2: light-dark(#e5dccc, #1a242c);
-  --border: light-dark(#ddd2c0, #22303a);
-  --border-soft: light-dark(#e8ddcd, #1b262e);
-  --border-strong: light-dark(#cbbca4, #2d4049);
+  --bg: #0d1216;
+  --bg-soft: #11181d;
+  --surface: #172027;
+  --surface-2: #1a242c;
+  --border: #22303a;
+  --border-soft: #1b262e;
+  --border-strong: #2d4049;
 
   /* ink */
-  --ink: light-dark(#221a12, #f8f8f2);
-  --ink-soft: light-dark(#3d332a, #d7d9d2);
-  --ink-muted: light-dark(#6a5c4d, #93a0a9);
-  --ink-faint: light-dark(#7c6c58, #6b7d8b);
+  --ink: #f8f8f2;
+  --ink-soft: #d7d9d2;
+  --ink-muted: #93a0a9;
+  --ink-faint: #6b7d8b;
 
   /* ember accents */
-  --ember: light-dark(#b8531a, #ff8c42);
-  --ember-bright: light-dark(#a8480f, #ffa53c);
-  --amber: light-dark(#c07a00, #ffd23f);
-  --accent-strong: light-dark(#a8480f, #ffd23f);
+  --ember: #ff8c42;
+  --ember-bright: #ffa53c;
+  --amber: #ffd23f;
+  --accent-strong: #ffd23f;
 
   /* syntax palette — only used inside the dark code slab */
   --rose: #ff5cb8;
@@ -35,17 +35,17 @@
   --violet: #a97dff;
 
   /* composed tokens */
-  --header-bg: light-dark(rgba(247, 243, 235, 0.85), rgba(13, 18, 22, 0.82));
-  --glow-a: light-dark(rgba(255, 140, 66, 0.18), rgba(255, 140, 66, 0.11));
-  --glow-b: light-dark(rgba(255, 92, 184, 0.06), rgba(255, 92, 184, 0.05));
-  --selection-bg: light-dark(rgba(214, 110, 32, 0.22), rgba(255, 210, 63, 0.24));
-  --selection-ink: light-dark(#221a12, #ffffff);
-  --link-rule: light-dark(rgba(184, 83, 26, 0.3), rgba(255, 140, 66, 0.35));
-  --btn-border: light-dark(rgba(184, 83, 26, 0.4), rgba(255, 165, 60, 0.45));
-  --btn-hover: light-dark(rgba(184, 83, 26, 0.08), rgba(255, 140, 66, 0.12));
-  --code-bg: light-dark(#1b1613, #0a0e12);
-  --code-ink: light-dark(#e9e1d4, #d7d9d2);
-  --code-inline: light-dark(#7a4a12, #e9ff5f);
+  --header-bg: rgba(13, 18, 22, 0.82);
+  --glow-a: rgba(255, 140, 66, 0.11);
+  --glow-b: rgba(255, 92, 184, 0.05);
+  --selection-bg: rgba(255, 210, 63, 0.24);
+  --selection-ink: #ffffff;
+  --link-rule: rgba(255, 140, 66, 0.35);
+  --btn-border: rgba(255, 165, 60, 0.45);
+  --btn-hover: rgba(255, 140, 66, 0.12);
+  --code-bg: #0a0e12;
+  --code-ink: #d7d9d2;
+  --code-inline: #e9ff5f;
 
   /* type & rhythm */
   --wrap: 44rem;
@@ -732,16 +732,78 @@ samp {
   color: var(--ember-bright);
 }
 
-/* ---------- colour scheme switch ---------- */
+/* ---------- colour schemes ---------- */
 
-html:has(#scheme-light:checked),
-html[data-scheme="light"] {
+/* evening — warm paper, the previous light theme */
+html:has(#scheme-evening:checked),
+html[data-scheme="evening"] {
   color-scheme: light;
+
+  --bg: #f7f3eb;
+  --bg-soft: #f1ebe1;
+  --surface: #ece4d6;
+  --surface-2: #e5dccc;
+  --border: #ddd2c0;
+  --border-soft: #e8ddcd;
+  --border-strong: #cbbca4;
+
+  --ink: #221a12;
+  --ink-soft: #3d332a;
+  --ink-muted: #6a5c4d;
+  --ink-faint: #7c6c58;
+
+  --ember: #b8531a;
+  --ember-bright: #a8480f;
+  --amber: #c07a00;
+  --accent-strong: #a8480f;
+
+  --header-bg: rgba(247, 243, 235, 0.85);
+  --glow-a: rgba(255, 140, 66, 0.18);
+  --glow-b: rgba(255, 92, 184, 0.06);
+  --selection-bg: rgba(214, 110, 32, 0.22);
+  --selection-ink: #221a12;
+  --link-rule: rgba(184, 83, 26, 0.3);
+  --btn-border: rgba(184, 83, 26, 0.4);
+  --btn-hover: rgba(184, 83, 26, 0.08);
+  --code-bg: #1b1613;
+  --code-ink: #e9e1d4;
+  --code-inline: #7a4a12;
 }
 
-html:has(#scheme-dark:checked),
-html[data-scheme="dark"] {
-  color-scheme: dark;
+/* day — plain white */
+html:has(#scheme-day:checked),
+html[data-scheme="day"] {
+  color-scheme: light;
+
+  --bg: #ffffff;
+  --bg-soft: #f8f8f7;
+  --surface: #f3f3f2;
+  --surface-2: #ececeb;
+  --border: #e3e3e1;
+  --border-soft: #ededeb;
+  --border-strong: #cfcfcb;
+
+  --ink: #17181a;
+  --ink-soft: #2f3134;
+  --ink-muted: #5c6066;
+  --ink-faint: #85898f;
+
+  --ember: #b8531a;
+  --ember-bright: #a8480f;
+  --amber: #c07a00;
+  --accent-strong: #a8480f;
+
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --glow-a: rgba(255, 140, 66, 0.1);
+  --glow-b: rgba(255, 92, 184, 0.04);
+  --selection-bg: rgba(214, 110, 32, 0.2);
+  --selection-ink: #17181a;
+  --link-rule: rgba(184, 83, 26, 0.3);
+  --btn-border: rgba(184, 83, 26, 0.4);
+  --btn-hover: rgba(184, 83, 26, 0.08);
+  --code-bg: #1b1613;
+  --code-ink: #e9e1d4;
+  --code-inline: #7a4a12;
 }
 
 .switch {
