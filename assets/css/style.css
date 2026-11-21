@@ -434,6 +434,24 @@ img {
   color: var(--ember-bright);
 }
 
+/* compact, centred page variant (About) */
+
+.post--centered .post-header,
+.post--centered .prose {
+  text-align: center;
+}
+
+.post--centered .post-header {
+  margin-bottom: 1.9rem;
+}
+
+.post-header h1.page-title--compact {
+  font-size: 1.45rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+}
+
 /* ---------- prose ---------- */
 
 .prose {

@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<article class="post wrap">
+<article class="post wrap{% if page.centered %} post--centered{% endif %}">
   <header class="post-header">
     {%- if page.kicker %}
     <p class="kicker">{{ page.kicker }}</p>
     {%- endif %}
-    <h1>{{ page.heading | default: page.title }}</h1>
+    <h1{% if page.compact_heading %} class="page-title--compact"{% endif %}>{{ page.heading | default: page.title }}</h1>
     {%- if page.description %}
     <p class="lede">{{ page.description }}</p>
     {%- endif %}

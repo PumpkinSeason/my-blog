@@ -2,6 +2,8 @@
 layout: page
 title: About
 heading: "#About"
+centered: true
+compact_heading: true
 permalink: /about/
 ---
 
